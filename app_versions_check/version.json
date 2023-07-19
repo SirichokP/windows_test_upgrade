@@ -1,0 +1,8 @@
+{
+    "name": "Test In Application windows update",
+    "version": 1.0,
+    "description": [
+        "Test initial version"
+    ],
+    "windows_file_name": "installer/windows/mysetup.exe"
+}
