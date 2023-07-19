@@ -70,7 +70,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   Future<Map<String, dynamic>> loadJsonFromGithub() async {
     final response = await http.read(Uri.parse(
-        "https://raw.githubusercontent.com/SirichokP/windows_test_upgrade/app_versions_check/version.json"));
+        "https://raw.githubusercontent.com/SirichokP/windows_test_upgrade/main/app_versions_check/version.json"));
     return jsonDecode(response);
   }
 
@@ -143,7 +143,7 @@ class _MyHomePageState extends State<MyHomePage> {
         "${(await getApplicationDocumentsDirectory()).path}/$fileName";
 
     await dio.download(
-      "https://github.com/SirichokP/windows_test_upgrade/app_versions_check/$appPath",
+      "https://github.com/SirichokP/windows_test_upgrade/main/app_versions_check/$appPath",
       downloadedFilePath,
       onReceiveProgress: (received, total) {
         final progress = (received / total) * 100;
